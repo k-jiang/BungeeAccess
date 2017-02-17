@@ -1,0 +1,37 @@
+# BungeeAccess
+# Control player accesses to BungeeCord instances.
+# By: kjiang
+
+# Enable online mode.
+uuid: true
+
+# Checking Priority
+# This plugin will check blacklist / whitelist by order listed below. eg, if "blacklistip" is listed on top of "whitelistplayer", any player join with blacklisted-ip will be kick even their name is on the whitelist-name.
+# To modify the actural blacklist / whitelist, see data.yml
+# "blacklist-all" means the player shall be kick if they does not meet the whitelist reqirement. This check should be at the end of priority list. You can remove this check if you don't want to have "whitelist mode" switched on.
+# It is also suggested that you should remove any check you don't use for a better efficiency.
+priority:
+- blacklist-ip
+- blacklist-player
+- whitelist-player
+- whitelist-ip
+- blacklist-all
+
+# Custom messages when a player is kicked due to blacklist
+message:
+  blacklistname: "Your name is blacklisted on this server."
+  blacklistuuid: "You are blacklisted on this server."
+  blacklistip: "Your IP is blacklisted on this server."
+  blacklistall: "Whitelist is enabled on this server. Please contact server admins to have your name on the list."
+
+# Storage Type
+# Right now it only supports "file" (data stored in data.yml) or "mysql".
+storage: file
+
+# MySQL Settings
+db-host: localhost
+db-port: 3306
+db-user: root
+db-pass: 123456
+db-database: bungeeaccess
+db-table-prefix: ba_
