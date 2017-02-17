@@ -6,8 +6,8 @@
 whitelist-player:
   - Notch|069a79f4-44e9-4726-a5be-fca90e38aaf5
   - a_good_player_name|00000000-0000-4000-8000-000000000000
-  - another_good_player_name
-  - put_your_name_here
+  - another_good_player_name|0
+  - put_your_name_here|0
 
 # Whitelisted ip addresses
 # Supports ip address range
@@ -17,7 +17,7 @@ whitelist-ip:
 
 # Blacklisted players
 blacklist-player:
-  - a_bad_player
+  - a_bad_player|0
 
 # Blacklisted ip addresses
 blacklist-ip:
