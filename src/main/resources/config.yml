@@ -6,10 +6,10 @@
 uuid: true
 
 # Checking Priority
-# This plugin will check blacklist / whitelist by order listed below. eg, if "blacklistip" is listed on top of "whitelistplayer", any player join with blacklisted-ip will be kick even their name is on the whitelist-name.
+# This plugin will check blacklist / whitelist follow by the order listed below. eg, if "blacklistip" is listed on top of "whitelistplayer", any player join with blacklisted-ip will be kick even their name is on the whitelist-name.
 # To modify the actural blacklist / whitelist, see data.yml
 # "blacklist-all" means the player shall be kick if they does not meet the whitelist reqirement. This check should be at the end of priority list. You can remove this check if you don't want to have "whitelist mode" switched on.
-# It is also suggested that you should remove any check you don't use for a better efficiency.
+# It is also suggested that you should remove any checks you don't need for a better efficiency.
 priority:
 - blacklist-ip
 - blacklist-player
