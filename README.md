@@ -15,6 +15,7 @@ If you are looking for an better all-in-one white-list / black-list , or you jus
 - UUID
 - ~~MySQL~~ (Not implemented yet)
 - ~~Permissions~~ (Planed)
+- Better efficiency
 
 ## Installation and Settings
 1. Drop the BungeeAccess.jar into your **BungeeCord Plugins folder**. Then restart your **BungeeCord**. You don't need to restart any of your Spigot / CraftBukkit back-ends.
@@ -112,8 +113,10 @@ For player name, you can just put it name on the list, like:
 ```
 The plugin will resolve UUID automatically for you if you have `uuid: true` on your config.yml.  
 
-For IP address, you can put ip ranges, format likes `[ip begin]-[ip end]` e.g. `127.0.0.1-127.0.0.255`. Using IP ranges instead of individual IPs could boost performance. It is very useful when you want to block player join from certain geographic regions. You could visit [he.net](http://bgp.he.net) for geolocation ip block search.  
-You should noticed that the ip range does not support CIDR format (x.y.z.w/n) yet. Check [here](http://www.techzoom.net/tools/IPAddressCalculator) if you want to convert from CIDR to IP ranges.
+### * About IP address and IP ranges
+You can put ip ranges as you want, formats as `[ip begin]-[ip end]` e.g. `127.0.0.1-127.0.0.255`. Using IP ranges instead of individual IPs could boost performance. It is very useful when you want to block player join from certain geographic regions. You could visit [he.net](http://bgp.he.net) for geolocation ip block search.  
+Noticed that the ip range does not support CIDR format (e.g. 127.0.0.0/24) yet. Check [here](http://www.techzoom.net/tools/IPAddressCalculator) if you want to convert from CIDR to IP ranges.  
+For better efficiency, single IP address WILL be converted into something like `127.0.0.1-127.0.0.1`. So try not to touch it and forget about your OCD :p
 
 ## Commands
 (Sorry it is not implemented yet. Future edition will include player and IP add / removal functions.)
@@ -122,7 +125,7 @@ You should noticed that the ip range does not support CIDR format (x.y.z.w/n) ye
 All bugs and features requests should only be submitted on the [GitHub issue Page](https://github.com/k-jiang/BungeeAccess/issues).
 Please do NOT post any bugs on the comment section. Otherwise I will just simply ignore you.
 
-## TODOs
+## TO-DOs
 - support CIDR
 - MySQL
 - basic commands
