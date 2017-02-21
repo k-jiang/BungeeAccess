@@ -12,10 +12,6 @@ public class BungeeAccess extends Plugin {
 
     public static List<String> playerWhiteList = new ArrayList<>();
     public static List<String> uuidWhiteList = new ArrayList<>();
-    public static List<String> ipWhiteList = new ArrayList<>();
-    public static List<String> playerBlackList = new ArrayList<>();
-    public static List<String> uuidBlackList = new ArrayList<>();
-    public static List<String> ipBlackList = new ArrayList<>();
 
     // checkOrder
     public static List<String> checkPriority;
@@ -34,24 +30,21 @@ public class BungeeAccess extends Plugin {
     public static List<int[]> blackListIp = new ArrayList<>();
 
     // create config handler
-    ConfigHandler config = new ConfigHandler(this);
-    Config config2 = new Config(this);
+    Config config = new Config(this);
 
     @Override
     public void onEnable() {
 
         // load config.yml (just load the file, data processing will be later)
-        config.loadConfig();
-        config2.loadFile();
+        config.loadFile();
 
         // determine storage type and load whitelist and blacklist
         if ( config.getStorageType().equalsIgnoreCase("file") ) {
             // load white and black list from data.yml
             // and resolve uuid as well.
             config.loadData();
-            config2.loadData();
 
-            config2.getChecklistPriority();
+            config.getChecklistPriority();
 
             // Save data.yml
             //config.saveData();

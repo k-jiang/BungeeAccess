@@ -73,24 +73,24 @@ db-table-prefix: ba_
 # Whitelisted players
 # UUIDs are optional. If you set "uuid" to true, BungeeAccess will fetch UUID for you.
 whitelist-player:
-  - Notch|069a79f4-44e9-4726-a5be-fca90e38aaf5
-  - a_good_player_name|00000000-0000-4000-8000-000000000000
-  - another_good_player_name|0
-  - put_your_name_here|0
+- Notch|069a79f4-44e9-4726-a5be-fca90e38aaf5
+- a_good_player_name|00000000-0000-4000-8000-000000000000
+- another_good_player_name|0
+- put_your_name_here|0
 
 # Whitelisted ip addresses
 # Supports ip address range
 whitelist-ip:
-  - 127.0.0.1
-  - 127.0.1.0-127.0.1.255
+- 127.0.0.1
+- 127.0.1.0-127.0.1.255
 
 # Blacklisted players
 blacklist-player:
-  - a_bad_player|0
+- a_bad_player|0
 
 # Blacklisted ip addresses
 blacklist-ip:
-  - 192.0.2.0-192.0.2.31
+- 192.0.2.0-192.0.2.31
 ```
 
 ### * About "priority"
@@ -106,10 +106,10 @@ And yes, the `blacklist-all` can be removed if you want "innocent" players be ab
 ### * About UUID in "data.yml"
 For player name, you can just put it name on the list, like:
 ```
-  - Notch
-  - a_good_player_name
-  - another_good_player_name
-  - put_your_name_here
+- Notch
+- a_good_player_name
+- another_good_player_name
+- put_your_name_here
 ```
 The plugin will resolve UUID automatically for you if you have `uuid: true` on your config.yml.  
 
