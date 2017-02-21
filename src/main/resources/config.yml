@@ -25,7 +25,8 @@ message:
   blacklistall: "Whitelist is enabled on this server. Please contact server admins to have your name on the list."
 
 # Storage Type
-# Right now it only supports "file" (data stored in data.yml) or "mysql".
+# Right now it only supports "file" (data stored in data.yml).
+# Supports of "mysql" will be avaliable in the future.
 storage: file
 
 # MySQL Settings

@@ -1,5 +1,5 @@
 # BungeeAccess
-# This file used to store whitelists and blacklists.
+# This file is used for storing whitelists and blacklists.
 
 # Whitelisted players
 # UUIDs are optional. If you set "uuid" to true, BungeeAccess will fetch UUID for you.
