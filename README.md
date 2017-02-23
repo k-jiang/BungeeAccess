@@ -1,6 +1,9 @@
 # BungeeAccess
 An advanced white-list / blacklist plugin for BungeeCord.
 
+# Spigot page
+https://www.spigotmc.org/resources/bungeeaccess.36700/
+
 ## Description
 This is a perfect white-list / black-list solution to your network, a BungeeCord-side plugin supports both player names and IPs detects. It allows priority setting, so without any complicated understands, you can customize how are the white-list or black-list should be applied in order. It also supports IPv6, UUID, and (in the future) MySQL.  
 If you are looking for a better all-in-one white-list / black-list plugin, or you just sick with installing multiple plugins in every single Spigot back-ends and tried of synchronize them manually, then you may give this one a try.
@@ -9,14 +12,20 @@ If you are looking for a better all-in-one white-list / black-list plugin, or yo
 
 ## Features
 - Whitelist and Blacklist on players / IP
-- Customize check priority
+- Custom check priority
 - IP ranges supports, eg `192.0.2.0-192.0.2.15`
 - IPv6
-- Customize messages
+- Custom messages
 - UUID
 - ~~MySQL~~ (Not implemented yet)
 - ~~Permissions~~ (Planed)
 - Better performance
+
+## Requirements
+- BungeeCord (Yes it is a BungeeCord only plugin)
+- Java 8 +
+
+The old time with Java 7 is over, period. Java 8 provides less bugs, more security and better performance (even tough it is still Java), and most of Java 7 applications are capable with JRE 8 so please consider upgrade yours as well.
 
 ## Installation and Settings
 1. Drop the BungeeAccess.jar into your **BungeeCord Plugins folder**. Then restart your **BungeeCord**. You don't need to restart any of your Spigot / CraftBukkit back-ends.
@@ -116,7 +125,7 @@ For player list, you can just put names on the list, like:
 The plugin will resolve UUID automatically for you if you have `uuid: true` on your config.yml.  
 
 ### * About IP address and IP ranges
-You can put ip ranges as you want, formats as `[ip begin]-[ip end]` e.g. `127.0.0.1-127.0.0.255`. Using IP ranges instead of individual IPs could boost performance. It is very useful when you want to block player join from certain geographic regions. You could visit [he.net](http://bgp.he.net) for geolocation ip block search.  
+You can put ip ranges as you want, formats as `[ip begin]-[ip end]` e.g. `127.0.0.1-127.0.0.255`. Using IP ranges instead of individual IPs could boost performance. It is very useful when you want to block player join from certain geographic regions. You could visit [bgp.he.net](http://bgp.he.net) for geolocation ip block search.  
 Noticed that the ip range does not support CIDR format (e.g. 127.0.0.0/24) yet. Check [here](http://www.techzoom.net/tools/IPAddressCalculator) if you want to convert from CIDR to IP ranges.  
 For better performance, single IP address WILL be converted into something like `127.0.0.1-127.0.0.1`. So try not to touch it and forget about your OCD :p
 
@@ -135,4 +144,4 @@ Please do NOT post any bugs on the comment section. Otherwise I will just simply
 - code clean up
 
 ## License
-The plugin is licensed under [Apache-2.0](https://github.com/k-jiang/BungeeAccess/blob/master/LICENSE). Terms and conditions are applied.
+The plugin is licensed under [Apache-2.0](https://github.com/k-jiang/BungeeAccess/blob/master/LICENSE) with terms and conditions applied.
